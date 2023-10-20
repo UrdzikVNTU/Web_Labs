@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="cart.js" defer></script>
+    
+    <title>Товари</title>
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="goods.html">Товари</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+       <section class="products">
+        <!-- Перший товар -->
+        <div class="product">
+    <img src="images/good1.webp" alt="New Balance Mr530">
+    <h3>New Balance Mr530</h3>
+    <p class="product-price">4000 грн</p>
+    <p class="product-description">New Balance поєднують у собі комфорт та спортивний дизайн, а також готові до випробувань. </p>
+    <label for="quantity-1">Кількість:</label>
+    <input type="number" id="quantity-1" class="quantity" value="1" min="1">
+    <button class="add-to-cart" data-name="Товар 1" data-price="200">Додати до корзини</button>
+</div>
+
+<!-- Другий товар -->
+<div class="product">
+    <img src="images/good2.webp" alt="ASICS Gel-1130">
+    <h3>ASICS Gel-1130</h3>
+    <p class="product-price">5200 грн</p>
+    <p class="product-description">Модель оснащена технологією GEL, яка поглинає ударне навантаження кожного кроку.</p>
+    <label for="quantity-2">Кількість:</label>
+    <input type="number" id="quantity-2" class="quantity" value="1" min="1">
+    <button class="add-to-cart" data-name="Товар 2" data-price="150">Додати до корзини</button>
+</div>
+<!-- Третій товар -->
+<div class="product">
+    <img src="images/good3.webp" alt="New Balance 574">
+    <h3>New Balance 5742</h3>
+    <p class="product-price">4800 грн</p>
+    <p class="product-description">Ехнологія Encap сприяє легкої амортизації та стабілізації стопи, забезпечуючи неперевершений комфорт протягом усього дня.</p>
+    <label for="quantity-2">Кількість:</label>
+    <input type="number" id="quantity-2" class="quantity" value="1" min="1">
+    <button class="add-to-cart" data-name="Товар 2" data-price="150">Додати до корзини</button>
+</div>
+<!-- Четвертий товар -->
+<div class="product">
+    <img src="images/good4.webp" alt="AIR JORDAN 1 LOW">
+    <h3>AIR JORDAN 1 LOW</h3>
+    <p class="product-price">94300 грн</p>
+    <p class="product-description">Виробник: Air Jordan.Модель: CQ4277-001. Код товару: 90110111</p>
+    <label for="quantity-2">Кількість:</label>
+    <input type="number" id="quantity-2" class="quantity" value="1" min="1">
+    <button class="add-to-cart" data-name="Товар 2" data-price="150">Додати до корзини</button>
+</div>
+<!-- П'ятий товар -->
+<div class="product">
+    <img src="images/good5.webp" alt="NEW BALANCE 2002">
+    <h3>NEW BALANCE 2002</h3>
+    <p class="product-price">250490 грн</p>
+    <p class="product-description">ЦВиробник: New Balance Модель: M2002RDN Код товару: 90116227</p>
+    <label for="quantity-2">Кількість:</label>
+    <input type="number" id="quantity-2" class="quantity" value="1" min="1">
+    <button class="add-to-cart" data-name="Товар 2" data-price="150">Додати до корзини</button>
+</div>
+<!-- Шостий товар -->
+<div class="product">
+    <img src="images/good6.webp" alt="AIR JORDAN RETRO 6 DENIM">
+    <h3>AIR JORDAN RETRO 6 DENIM</h3>
+    <p class="product-price">168290 грн</p>
+    <p class="product-description">Виробник: Air Jordan Модель: DM9045-100 Код товару: 95919.</p>
+    <label for="quantity-2">Кількість:</label>
+    <input type="number" id="quantity-2" class="quantity" value="1" min="1">
+    <button class="add-to-cart" data-name="Товар 2" data-price="150">Додати до корзини</button>
+</div>
+<!-- Сьомий товар -->
+<div class="product">
+    <img src="images/good7.webp" alt="ADIDAS YEEZY BOOST 350 V2 Static">
+    <h3>ADIDAS YEEZY BOOST 350 V2 Static</h3>
+    <p class="product-price">10500 грн</p>
+    <p class="product-description">Верх виконаний за технологією Primeknit – легкий, дихаючий, плетений текстиль
+    <input type="number" id="quantity-2" class="quantity" value="1" min="1">
+    <button class="add-to-cart" data-name="Товар 2" data-price="150">Додати до корзини</button>
+</div>
+<!-- Восьмий товар -->
+<div class="product">
+    <img src="images/good8.webp" alt="AIR JORDAN 4 RETRO">
+    <h3>AIR JORDAN 4 RETRO</h3>
+    <p class="product-price">25300 грн</p>
+    <p class="product-description">Виробник: Air Jordan Модель: DR5415-103 Код товару: 90110167</p>
+    <label for="quantity-2">Кількість:</label>
+    <input type="number" id="quantity-2" class="quantity" value="1" min="1">
+    <button class="add-to-cart" data-name="Товар 2" data-price="150">Додати до корзини</button>
+</div>
+</section>
+
+<!-- Вміст корзини у dropdown-контейнері -->
+<button id="open-cart" class="cart-button">Корзина <span id="cart-count">0</span></button> 
+
+<!-- Корзина (початково прихована) -->
+<div class="cart-container hidden">
+    <ul class="cart-items">
+        <!-- Вміст корзини буде вставлений тут через JavaScript -->
+    </ul>
+    <p>Загальна сума: <span id="total-amount">0 грн</span></p>
+    <button id="clear-cart">Очистити корзину</button>
+</div>
+<footer>
+    <p>&copy; 2023 Магазин Ретро-кросівок</p>
+</footer>
+  
+</body>
+</html>
